@@ -46,4 +46,10 @@ public class PathsTest {
 		Paths newPath = new Paths();
 		assertTrue(newPath.hasDirectFlight("Singapore","Dubai"));
 	}
+
+	@Test
+	public void hasDirectFlight_returns_true_for_Seoul_to_Beijing() {
+		Paths newPath = new Paths();
+		assertTrue(newPath.hasDirectFlight("Seoul","Beijing"));
+	}
 }
