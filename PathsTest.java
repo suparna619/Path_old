@@ -20,6 +20,6 @@ public class PathsTest {
 		assertTrue(paths.isStationPresent("Tokyo"));
 		
 		assertFalse(paths.isStationPresent("Chennai"));
-		assertFalse(paths.isStationPresent("Stockholm"))
+		assertFalse(paths.isStationPresent("Stockholm"));
 	}
 }

@@ -20,4 +20,20 @@ public class Paths {
 		map.put("Seoul",seoul);
 		map.put("Beijing",beijing);
 	}
+
+	public boolean isStationPresent(String station){
+		Set<String> sourceStations = map.keySet();
+
+		if(sourceStations.contains(station))
+			return true;
+		else {
+			for(String source : sourceStations) {
+				List<String> destinations = map.get(source);
+				if(destinations.contains(station))
+					return true;
+			}
+		}
+
+		return false;
+	}
 }
