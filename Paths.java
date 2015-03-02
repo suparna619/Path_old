@@ -36,4 +36,8 @@ public class Paths {
 
 		return false;
 	}
+
+	public boolean hasDirectFlight(String source, String destination){
+		return map.get(source).contains(destination);
+	}
 }

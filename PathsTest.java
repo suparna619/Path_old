@@ -8,7 +8,7 @@ import java.util.*;
 public class PathsTest {
 	
 	@Test
-	public void isCityPresent_checks_whether_city_is_prsent (){
+	public void isCityPresent_checks_whether_city_is_prsent() {
 		Paths paths = new Paths();
 
 		assertTrue(paths.isStationPresent("Bangalore"));
@@ -21,5 +21,11 @@ public class PathsTest {
 		
 		assertFalse(paths.isStationPresent("Chennai"));
 		assertFalse(paths.isStationPresent("Stockholm"));
+	}
+
+	@Test
+	public void hasDirectFlight_returns_true_for_Bangalore_to_Singapore() {
+		Paths newPath = new Paths();
+		assertTrue(newPath.hasDirectFlight("Bangalore","Singapore"));
 	}
 }
