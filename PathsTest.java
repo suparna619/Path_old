@@ -8,7 +8,18 @@ import java.util.*;
 public class PathsTest {
 	
 	@Test
-	public void test_sampleTest(){
-		assertEquals(1,1);
+	public void isCityPresent_checks_whether_city_is_prsent (){
+		Paths paths = new Paths();
+
+		assertTrue(paths.isStationPresent("Bangalore"));
+		assertTrue(paths.isStationPresent("Singapore"));
+		assertTrue(paths.isStationPresent("Seoul"));
+		assertTrue(paths.isStationPresent("Beijing"));
+
+		assertTrue(paths.isStationPresent("Dubai"));
+		assertTrue(paths.isStationPresent("Tokyo"));
+		
+		assertFalse(paths.isStationPresent("Chennai"));
+		assertFalse(paths.isStationPresent("Stockholm"))
 	}
 }
