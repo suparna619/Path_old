@@ -59,23 +59,6 @@ public class Paths {
 			System.out.println("No city named '"+destinationStation+"' in database");
 			return;
 		}
-		else
-			System.out.println(newPath.hasDirectFlight(sourceStation,destinationStation));
+		System.out.println(newPath.hasDirectFlight(sourceStation,destinationStation));
 	}
 }
-
-// public static void main(String[] args) {
-// 		String source = args[0];
-// 		String destination = args[1];
-// 		Paths paths = new Paths();
-// 		if(!paths.isCityPresent(source)){
-// 			System.out.println("No city named '"+source+"' in database");
-// 			return;
-// 		}
-// 		if(!paths.isCityPresent(destination)){
-// 			System.out.println("No city named '"+destination+"' in database");
-// 			return;
-// 		}
-// 		else
-// 			System.out.println(paths.findFlight(source,destination));
-// 	}

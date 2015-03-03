@@ -82,4 +82,22 @@ public class PathsTest {
 		Paths newPath = new Paths();
 		assertFalse(newPath.hasDirectFlight("Singapore","Tokyo"));
 	}
+
+	@Test
+	public void hasDirectFlight_returns_false_for_NULL_to_Tokyo() {
+		Paths newPath = new Paths();
+		assertFalse(newPath.hasDirectFlight(null,"Tokyo"));
+	}
+
+	@Test
+	public void hasDirectFlight_returns_false_for_Singapore_to_NULL() {
+		Paths newPath = new Paths();
+		assertFalse(newPath.hasDirectFlight("Singapore",null));
+	}
+
+	@Test
+	public void hasDirectFlight_returns_false_for_null_to_null() {
+		Paths newPath = new Paths();
+		assertFalse(newPath.hasDirectFlight(null,null));
+	}
 }
