@@ -36,9 +36,9 @@ public class Paths {
 		if(sourceStations.contains(station))
 			return true;
 		else{
-			for(String source : sourceStations){
-				List<String> destinations = map.get(source) ;
-				if(destinations.contains(station))
+			for(String sourceElement : sourceStations){
+				List<String> place = map.get(sourceElement) ;
+				if(place.contains(station))
 					return true;
 			}
 		}
@@ -69,19 +69,24 @@ public class Paths {
 		return false;
 	}
 
+	public String printPath(String source, String destination){
+		Paths newPath = new Paths();
+		boolean hasWay = newPath.hasWay(source,destination);
+		return String.join(" -> ",newPath.sourceToDestinationPath);
+	}
+
 	public static void main(String[] args) {
 		String sourceStaton = args[0];
 		String destinationStation = args[1];
 		Paths newPath = new Paths();
+		String path;
 		if(!newPath.isStationPresent(sourceStaton)){
 			System.out.println("No city named '" + sourceStaton + "' in database");
-			return;
 		}
 		if(!newPath.isStationPresent(destinationStation)){
 			System.out.println("No city named '" + destinationStation + "' in database");
-			return;
 		}
 		else
-			System.out.println(newPath.hasWay(sourceStaton,destinationStation));
+			System.out.println(newPath.printPath(sourceStaton,destinationStation));
 	}
 }

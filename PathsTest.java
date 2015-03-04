@@ -130,5 +130,11 @@ public class PathsTest {
 	public void hasWay_returns_true_for_Tokyo_to_Singapore() {
 		Paths newPath = new Paths();
 		assertTrue(newPath.hasWay("Tokyo","Singapore"));
-	}	
+	}
+
+	@Test
+	public void printPath_returns_path_for_Tokyo_to_Singapore() {
+		Paths newPath = new Paths();
+		assertEquals(newPath.printPath("Tokyo","Singapore"),"Tokyo -> Beijing -> Seoul -> Singapore");
+	}
 }
