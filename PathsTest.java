@@ -143,10 +143,20 @@ public class PathsTest {
 		assertTrue(newPath.hasWay("Bangalore","Seoul"));
 	}
 
+	public void printPath_returns_path_for_Bangalore_to_Seoul() {
+		Paths newPath = new Paths();
+		assertEquals(newPath.printPath("Bangalore","Seoul"),"Bangalore -> Singapore -> Seoul");
+	}
+
 	@Test
 	public void hasWay_returns_true_for_Seoul_to_Bangalore() {
 		Paths newPath = new Paths();
 		assertTrue(newPath.hasWay("Seoul","Bangalore"));
+	}
+
+	public void printPath_returns_path_for_Seoul_to_Bangalore() {
+		Paths newPath = new Paths();
+		assertEquals(newPath.printPath("Seoul","Bangalore"),"Seoul -> Singapore -> Bangalore");
 	}
 
 	@Test
