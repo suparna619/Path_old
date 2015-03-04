@@ -143,6 +143,7 @@ public class PathsTest {
 		assertTrue(newPath.hasWay("Bangalore","Seoul"));
 	}
 
+	@Test
 	public void printPath_returns_path_for_Bangalore_to_Seoul() {
 		Paths newPath = new Paths();
 		assertEquals(newPath.printPath("Bangalore","Seoul"),"Bangalore -> Singapore -> Seoul");
@@ -154,6 +155,7 @@ public class PathsTest {
 		assertTrue(newPath.hasWay("Seoul","Bangalore"));
 	}
 
+	@Test
 	public void printPath_returns_path_for_Seoul_to_Bangalore() {
 		Paths newPath = new Paths();
 		assertEquals(newPath.printPath("Seoul","Bangalore"),"Seoul -> Singapore -> Bangalore");
@@ -165,9 +167,10 @@ public class PathsTest {
 		assertTrue(newPath.hasWay("Bangalore","Dubai"));
 	}
 
+	@Test
 	public void printPath_returns_path_for_Bangalore_to_Dubai() {
 		Paths newPath = new Paths();
-		assertEquals(newPath.printPath("Bangalore","Dubai"),"Bangalore -> Singapore -> Dubai")
+		assertEquals(newPath.printPath("Bangalore","Dubai"),"Bangalore -> Singapore -> Dubai");
 	}
 
 	@Test
@@ -175,6 +178,13 @@ public class PathsTest {
 		Paths newPath = new Paths();
 		assertTrue(newPath.hasWay("Dubai","Bangalore"));
 	}
+
+	@Test
+	public void printPath_returns_path_for_Dubai_to_Bangalore() {
+		Paths newPath = new Paths();
+		assertEquals(newPath.printPath("Dubai","Bangalore"),"Dubai -> Singapore -> Bangalore");
+	}
+
 
 	// @Test //[Falling Test]
 	// public void hasWay_returns_true_for_Singapore_to_Tokyo() {
