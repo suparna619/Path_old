@@ -120,11 +120,11 @@ public class PathsTest {
 		assertTrue(newPath.hasWay("Dubai","Bangalore"));
 	}
 
-	// @Test
-	// public void hasWay_returns_true_for_Singapore_to_Tokyo() {
-	// 	Paths newPath = new Paths();
-	// 	assertTrue(newPath.hasWay("Singapore","Tokyo"));
-	// }
+	@Test //[Falling Test]
+	public void hasWay_returns_true_for_Singapore_to_Tokyo() {
+		Paths newPath = new Paths();
+		assertTrue(newPath.hasWay("Singapore","Tokyo"));
+	}
 
 	@Test
 	public void hasWay_returns_true_for_Tokyo_to_Singapore() {
