@@ -165,6 +165,11 @@ public class PathsTest {
 		assertTrue(newPath.hasWay("Bangalore","Dubai"));
 	}
 
+	public void printPath_returns_path_for_Bangalore_to_Dubai() {
+		Paths newPath = new Paths();
+		assertEquals(newPath.printPath("Bangalore","Dubai"),"Bangalore -> Singapore -> Dubai")
+	}
+
 	@Test
 	public void hasWay_returns_true_for_Dubai_to_Bangalore() {
 		Paths newPath = new Paths();
